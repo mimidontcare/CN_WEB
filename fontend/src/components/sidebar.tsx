@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export default function Sidebar({ className }: { className?: string }) {
   return (
@@ -8,15 +8,15 @@ export default function Sidebar({ className }: { className?: string }) {
       </div>
 
       <nav className="p-3 space-y-2">
-        <Link to="/dashboard" className="block hover:bg-gray-100 p-2 rounded">
+        <Link href="/dashboard" className="block hover:bg-gray-100 p-2 rounded">
           Dashboard
         </Link>
 
-        <Link to="/users" className="block hover:bg-gray-100 p-2 rounded">
+        <Link href="/users" className="block hover:bg-gray-100 p-2 rounded">
           Users
         </Link>
 
-        <Link to="/settings" className="block hover:bg-gray-100 p-2 rounded">
+        <Link href="/settings" className="block hover:bg-gray-100 p-2 rounded">
           Settings
         </Link>
       </nav>

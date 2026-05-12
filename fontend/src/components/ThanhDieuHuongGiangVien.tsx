@@ -2,14 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { SIDEBAR_MENU } from "../items_phu/slide_bar";
+import { SIDEBAR_MENU_GIANGVIEN } from "../items_phu/slide_bar";
 import { GraduationCap } from "lucide-react";
 
 type Props = {
   className?: string;
 };
 
-const ThanhDieuHuong = ({ className }: Props) => {
+const ThanhDieuHuongGiangVien = ({ className }: Props) => {
   const pathname = usePathname();
 
   return (
@@ -17,16 +17,20 @@ const ThanhDieuHuong = ({ className }: Props) => {
       {/* Header */}
       <div className="h-[10%] w-full text-black flex items-center font-bold text-lg">
         <GraduationCap className="w-8 h-8 m-2 text-blue-600" />
-        Trang admin
+        Giảng viên
       </div>
 
       {/* Menu */}
       <div className="flex flex-col justify-between h-[90%] ">
-        {SIDEBAR_MENU.map((group) => (
+        {SIDEBAR_MENU_GIANGVIEN.map((group) => (
           <div key={group.group} className="overflow-y-auto">
             {group.items.map((item) => {
               const IconComponent = item.icon;
-              const isActive = pathname.startsWith(item.path);
+              // Check exact match for "/giangvien", else startswith for others
+              const isActive =
+                item.path === "/giangvien"
+                  ? pathname === item.path
+                  : pathname.startsWith(item.path);
 
               return (
                 <Link
@@ -59,4 +63,4 @@ const ThanhDieuHuong = ({ className }: Props) => {
   );
 };
 
-export default ThanhDieuHuong;
+export default ThanhDieuHuongGiangVien;

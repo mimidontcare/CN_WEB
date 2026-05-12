@@ -1,6 +1,7 @@
 "use client";
 import { Search, Bell, ShieldQuestionMark } from "lucide-react";
-import { Link } from "react-router-dom";
+import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import NovigationChild from "../items_phu/novigationchild";
 
@@ -10,7 +11,7 @@ const PhanDau = ({ className }: { className?: string }) => {
     <div className={className}>
       <div className="text-black w-[75%] flex items-center relative">
         <span className="font-bold text-[22px] flex w-47 h-[100%] items-center justify-center ml-10">
-          <Link to="/admin/dashboard">Quản lý hệ thống</Link>
+          <Link href="/admin/dashboard">Quản lý hệ thống</Link>
         </span>
 
         <div className="flex w-[64%] h-full items-center relative justify-center">
