@@ -13,10 +13,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static("public"));
 
 // ===== PUBLIC ROUTE =====
-// app.use("/api/auth", require("./routes/auth.route"));
+app.use("/api/auth", require("./routes/auth.route"));
 
 // ===== PROTECTED ROUTE =====
-// app.use("/api", verifyToken); // middleware and jwt
+app.use("/api", verifyToken); // jwt middleware - yêu cầu đăng nhập
 
 app.use("/api/nguoidung", require("./routes/nguoidung.route"));
 app.use("/api/bangdiem", require("./routes/bangdiem.route"));
@@ -33,6 +33,8 @@ app.use("/api/lichthi", require("./routes/lichthi.route"));
 app.use("/api/nganh", require("./routes/nganh.route"));
 app.use("/api/giangvien", require("./routes/giangvien.route"));
 app.use("/api/daudiem", require("./routes/daudiem.route"));
+app.use("/api/gv-diemdanh", require("./routes/gv-diemdanh.route"));
+app.use("/api/gv", require("./routes/gv.route"));
 
 app.listen(5000, () => {
   console.log("🚀 Server running on port 5000");
