@@ -1,0 +1,10 @@
+src/admin/classes/page.tsx(3,22): error TS2307: Cannot find module '@/app/items_phu/button' or its corresponding type declarations.
+src/admin/departments/page.tsx(16,23): error TS2307: Cannot find module '@/app/items_phu/item_cua_khoa/page_hien' or its corresponding type declarations.
+src/admin/departments/page.tsx(17,28): error TS2307: Cannot find module '@/app/items_phu/item_cua_nganh/page_hien' or its corresponding type declarations.
+src/admin/departments/page.tsx(18,24): error TS2307: Cannot find module '@/ApiCall/KhoaApi' or its corresponding type declarations.
+src/admin/departments/page.tsx(19,29): error TS2307: Cannot find module '@/ApiCall/NganhApi' or its corresponding type declarations.
+src/App.tsx(28,47): error TS2741: Property 'children' is missing in type '{}' but required in type '{ children: ReactNode; }'.
+src/items_phu/item_cua_khoa/page_hien.tsx(5,25): error TS2307: Cannot find module '@/ApiCall/KhoaApi' or its corresponding type declarations.
+src/items_phu/item_cua_nganh/page_hien.tsx(5,24): error TS2307: Cannot find module '@/ApiCall/KhoaApi' or its corresponding type declarations.
+src/items_phu/item_cua_nganh/page_hien.tsx(6,29): error TS2307: Cannot find module '@/ApiCall/NganhApi' or its corresponding type declarations.
+src/login/page.tsx(6,19): error TS2307: Cannot find module '@/ApiCall/loginApi' or its corresponding type declarations.
