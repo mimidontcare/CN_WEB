@@ -43,9 +43,10 @@ export const SIDEBAR_MENU_GIANGVIEN = [
     group: "Chức năng",
     items: [
       { name: "Bảng điều khiển", path: "/giangvien", icon: LayoutDashboard },
-      { name: "Lịch dạy", path: "/giangvien/schedule", icon: Calendar },
-      { name: "Điểm danh", path: "/giangvien/attendance", icon: ClipboardCheck },
-      { name: "Nhập điểm", path: "/giangvien/grades", icon: BarChart3 },
+      { name: "Quản lý lớp", path: "/giangvien/quan-ly-lop", icon: School },
+      { name: "Lịch dạy", path: "/giangvien/lich-day", icon: Calendar },
+      { name: "Điểm danh", path: "/giangvien/diem-danh", icon: ClipboardCheck },
+      { name: "Nhập điểm", path: "/giangvien/quan-ly-diem", icon: BarChart3 },
     ],
   },
   {
