@@ -32,7 +32,7 @@ export const SIDEBAR_MENU = [
   {
     group: "Hệ thống",
     items: [
-      { name: "Cài đặt", path: "/settings", icon: Settings },
+      { name: "Cài đặt", path: "/admin/settings", icon: Settings },
       { name: "Đăng xuất", path: "/htmltemplate", icon: LogOut },
     ],
   },
@@ -52,7 +52,7 @@ export const SIDEBAR_MENU_GIANGVIEN = [
   {
     group: "Hệ thống",
     items: [
-      { name: "Cài đặt", path: "/settings", icon: Settings },
+      { name: "Cài đặt", path: "/admin/settings", icon: Settings },
       { name: "Đăng xuất", path: "/htmltemplate", icon: LogOut },
     ],
   },

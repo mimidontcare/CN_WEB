@@ -43,12 +43,12 @@ function NovigationChild({ className }: Props) {
       </div>
 
       {/* Footer */}
-      <Link
-        to="/notifications"
-        className="border-t-2 border-gray-200 text-blue-500 hover:underline font-semibold text-sm flex justify-center items-center h-[12%] hover:bg-gray-50 transition"
+      <button
+        onClick={() => alert("Tính năng thông báo đang được phát triển.")}
+        className="border-t-2 border-gray-200 text-blue-500 hover:underline font-semibold text-sm flex justify-center items-center h-[12%] hover:bg-gray-50 transition w-full"
       >
         Xem tất cả thông báo
-      </Link>
+      </button>
     </div>
   );
 }
