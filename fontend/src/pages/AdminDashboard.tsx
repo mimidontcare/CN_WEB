@@ -187,7 +187,7 @@ export default function AdminDashboard() {
                 <span className="text-indigo-600 font-bold text-lg">{totalGV}</span>
               </div>
 
-              <Link 
+              <Link
                 to="/admin/departments"
                 className="flex items-center justify-between p-3 bg-emerald-50/50 rounded-xl border border-emerald-100 hover:bg-emerald-100/50 transition-colors cursor-pointer"
               >
@@ -198,7 +198,7 @@ export default function AdminDashboard() {
                 <span className="text-emerald-600 font-bold text-sm">Xem chi tiết →</span>
               </Link>
 
-              <Link 
+              <Link
                 to="/admin/grades"
                 className="mt-5 w-full font-semibold text-slate-600 bg-slate-50 border border-slate-200 rounded-xl py-2.5 hover:bg-slate-100 transition-colors flex items-center justify-center gap-2"
               >

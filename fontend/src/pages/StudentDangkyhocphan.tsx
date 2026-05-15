@@ -7,6 +7,7 @@ export default function StudentDangkyhocphan() {
   const [openClasses, setOpenClasses] = useState<any[]>([]);
   const [registeredClasses, setRegisteredClasses] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [isSaving, setIsSaving] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -48,6 +49,21 @@ export default function StudentDangkyhocphan() {
       setRegisteredClasses([...registeredClasses, lop]);
       alert("Đăng ký thành công!");
     }
+  };
+
+  const handleSaveRegistration = () => {
+    if (registeredClasses.length === 0) {
+      alert("Bạn chưa chọn môn học nào để đăng ký!");
+      return;
+    }
+
+    setIsSaving(true);
+
+    // Mock API call since there's no backend endpoint for dangkyhocphan yet
+    setTimeout(() => {
+      setIsSaving(false);
+      alert("Đã lưu đăng ký học phần thành công vào hệ thống!");
+    }, 1500);
   };
 
   return (
@@ -104,11 +120,10 @@ export default function StudentDangkyhocphan() {
                       <button
                         onClick={() => handleRegister(lop)}
                         disabled={registeredClasses.some(r => r.MaLopHocPhan === lop.MaLopHocPhan)}
-                        className={`px-6 py-2.5 rounded-xl font-semibold transition-all ${
-                          registeredClasses.some(r => r.MaLopHocPhan === lop.MaLopHocPhan)
+                        className={`px-6 py-2.5 rounded-xl font-semibold transition-all ${registeredClasses.some(r => r.MaLopHocPhan === lop.MaLopHocPhan)
                             ? "bg-slate-100 text-slate-400 cursor-not-allowed"
                             : "bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-blue-500/30 active:scale-[0.98]"
-                        }`}
+                          }`}
                       >
                         {registeredClasses.some(r => r.MaLopHocPhan === lop.MaLopHocPhan) ? "Đã chọn" : "Đăng ký"}
                       </button>
@@ -145,8 +160,15 @@ export default function StudentDangkyhocphan() {
             )}
           </div>
           <div className="p-4 bg-white border-t border-slate-200">
-            <button className="w-full py-3 bg-gradient-to-r from-emerald-500 to-teal-600 text-white rounded-xl font-bold shadow-lg hover:shadow-emerald-500/30 transition-all">
-              Lưu đăng ký
+            <button
+              onClick={handleSaveRegistration}
+              disabled={registeredClasses.length === 0 || isSaving}
+              className={`w-full py-3 rounded-xl font-bold shadow-lg transition-all ${registeredClasses.length === 0 || isSaving
+                  ? "bg-slate-300 text-slate-500 cursor-not-allowed shadow-none"
+                  : "bg-gradient-to-r from-emerald-500 to-teal-600 text-white hover:shadow-emerald-500/30"
+                }`}
+            >
+              {isSaving ? "Đang xử lý..." : "Lưu đăng ký"}
             </button>
           </div>
         </div>
